@@ -6,16 +6,14 @@ let record = [
   //...
 ]
 
-let superbowlWin=function(arr){
-  let find=arr.find(function(w){
-    return w.result==="W";
-  })
-  if(find===undefined){
-    return "NO WINS"
+function superbowlWin(arr) {
+  let findWin = arr.find(function(w){
+     return w['result'] === 'W';})
+  if(findWin === undefined){
+    return findWin;
   }
-  else {
-    return find.year;
+  else{
+ return findWin['year'];
   }
 }
-
 superbowlWin(record)
